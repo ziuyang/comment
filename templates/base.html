@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Comment 기능 구현하기</title>
+  </head>
+  <body>
+    <header>
+      <a href="{% url 'home' %}"><h1>HOME</h1></a>
+      <a href="{% url 'create' %}"><h1>CREATE</h1></a>
+      <img class="dslion" src="{% static 'likelionds.png' %}" alt="" />
+    </header>
+    <section>{% block content %} {% endblock %}</section>
+    <footer>
+      <p>Copyright ⓒ 2020 덕성여대 멋쟁이사자처럼 All rights reserved.</p>
+    </footer>
+  </body>
+</html>

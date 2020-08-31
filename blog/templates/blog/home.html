@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %} {% for post in blogs.all %}
+<div class="home">
+  <h3><a href="{% url 'detail' post.pk %}">{{post.title}}</a></h3>
+  <p class="preview">[미리 보기]</p>
+  <p>{{post.summary}}</p>
+  <p class="date">{{post.date | date:"Y년 n월 j일 G시 i분" }}</p>
+</div>
+{% endfor %} {% endblock %}
