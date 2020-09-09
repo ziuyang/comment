@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Blog
-from .forms import BlogForm
+from .models import Blog, Comment
+from .forms import BlogForm, CommentForm
 
 
 def home(request):
@@ -21,7 +21,14 @@ def create(request):
 
 def detail(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
-    return render(request, 'blog/detail.html', {'blog': blog})
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        comment_form.instance.blog_id = pk
+        if comment_form.is_valid():
+            comment = comment_form.save()
+    comment_form = CommentForm()
+    comments = blog.comments.all()
+    return render(request, 'blog/detail.html', {'blog': blog, 'comments': comments, 'comment_form': comment_form})
 
 
 def update(request, pk):
