@@ -1,16 +1,16 @@
 @import "reset.css";
 /* FONT */
+
 @font-face {
-  font-family: "CookieRunOTF-Bold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff")
-    format("woff");
+  font-family: 'NeoDunggeunmo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff');
 
-.notosanskr * {
-  font-family: "Noto Sans KR", sans-serif;
+.NeoDunggeunmo * {
+  font-family: 'NeoDunggeunmo';
 }
 
 html,
@@ -22,8 +22,8 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: "Noto Sans KR", sans-serif;
-  background-color: #ebf0f1;
+  font-family: "NeoDunggeunmo";
+  background-color: #D2D9D5;
 }
 
 /* header */
@@ -33,15 +33,15 @@ header {
   flex-direction: row;
   width: 100%;
   height: 10%;
-  background-color: #092e20;
-  color: white;
+  background-color: #18B5D9;
+  color: #18298C;
 }
 
 header h1 {
   display: inline-block;
   padding: 10px;
   margin: 10px;
-  font-family: "CookieRunOTF-Bold";
+  font-family: 'NeoDunggeunmo';
 }
 header a {
   all: unset;
@@ -62,7 +62,7 @@ section {
 /* footer */
 
 footer {
-  background-color: #44b78b;
+  background-color: #89A67C;
   width: 100%;
   display: flex;
   align-items: center;
@@ -71,19 +71,19 @@ footer {
 }
 footer p {
   font-size: 8pt;
-  color: #ebf0f1;
+  color: #18298C;
 }
 
 /* 공통 요소 */
 
 h3 {
-  color: #0c4b33;
+  color: #F8E6E0;
   font-size: 2rem;
 }
 
 .date {
   font-size: 9pt;
-  color: gray;
+  color: black;
 }
 
 /* home.html */
@@ -91,7 +91,7 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px dashed #092e20;
+  border: 1px dashed #F8E6E0;
   margin: 1em 1em;
 }
 
@@ -102,14 +102,14 @@ h3 {
 }
 .home a {
   all: unset;
-  color: #0c4b33;
+  color: #F8E6E0;
   font-size: 2rem;
   cursor: pointer;
 }
 
 .preview {
   font-size: 9pt;
-  color: gray;
+  color: black;
   margin-bottom: 0px;
 }
 
@@ -119,7 +119,7 @@ h3 {
   background: none;
   appearance: none;
   border: 0;
-  color: black;
+  color: #18298C;
   border-bottom: 1px solid black;
   margin-top: 1em;
 }
@@ -127,13 +127,12 @@ h3 {
 #id_title {
   font-size: 20px;
   align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
-}
+  font-family: 'NeoDunggeunmo';
 
 #id_body {
   font-size: 15px;
   align-items: center;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'NeoDunggeunmo';
 }
 
 /* detail.html */
@@ -150,13 +149,13 @@ h3 {
 }
 .btn a {
   all: unset;
-  color: gray;
+  color: #18298C;
   margin: 1rem;
   cursor: pointer;
   font-weight: bolder;
 }
 .btn a:hover {
-  color: #44b78b;
+  color: #18298C;
 }
 
 .detail p {
