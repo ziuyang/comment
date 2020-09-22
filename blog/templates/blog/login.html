@@ -1,0 +1,21 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
+<h1> Login</h1>
+
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+
+    Username:
+    <br>
+    <input name="username" type="text" value="">
+    <br>
+    Password:
+    <br>
+    <input name="password" type="password" value="">
+    <br>
+    <br>
+    <input name="submit" type="login">
+</form>
+
+<h1><a href="{% provider_login_url 'naver' %}">네이버로 로그인하기</a></h1>

@@ -11,8 +11,20 @@
   <body>
     <header>
       <a href="{% url 'home' %}"><h1>HOME</h1></a>
+      <a href="{% url 'login' %}"><h1>LOGIN</h1></a>
+      <a href="{% url 'signup' %}"><h7>signup<h7></a>
       <a href="{% url 'create' %}"><h1>CREATE</h1></a>
       <img class="dslion" src="{% static 'likelionds.png' %}" alt="" />
+
+      {% if request.user.is_authenticated %}
+          <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+            <form id="logout" method="POST" action="{% url 'logout' %}">
+                  {% csrf_token %} <input type="hidden" />
+            </form>        
+      {%endif%}           
+
+      
+      
     </header>
     <section>{% block content %} {% endblock %}</section>
     <footer>

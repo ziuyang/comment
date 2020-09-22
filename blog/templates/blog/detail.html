@@ -24,9 +24,13 @@
 <p>댓글이 없습니다</p>
 {% endfor %}
 
+{% if request.user.is_authenticated %}
 <form action="" method="POST">
   {% csrf_token %} {{ comment_form.as_p }}
   <input type="submit" value="등록" />
 </form>
 <br />
+{% else %}
+
+{% endif %}
 {% endblock %}

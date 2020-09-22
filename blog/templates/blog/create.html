@@ -1,7 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
+{% if request.user.is_authenticated %}
 <form method="post">
   {% csrf_token %} {{form.as_p}}
   <input type="submit" value="등록" />
 </form>
+{% else %}
+{% endif %}
 {% endblock %}
