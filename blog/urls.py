@@ -11,9 +11,10 @@ urlpatterns = [
     path('comment/update/<int:pk>', views.comment_update, name='comment_update'),
     path('comment/delete/<int:pk>', views.comment_delete, name='comment_delete'),
     
-    path('', views.main, name='main'),
+    
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
     path('logout/', views.home, name='logout'),
     path('accounts/', include('allauth.urls')),
+    
 ]
